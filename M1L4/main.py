@@ -33,6 +33,27 @@ class MyClient(discord.Client):
             else:
                 await message.channel.send(f'Oops. It is actually {answer}.')
 
+        
+        if message.author.id == self.user.id:
+            return
+
+        if message.content.startswith('$hello'):
+            await message.reply('Hello!', mention_author=True)
+
+        elif message.content.startswith('$bye'):
+            await message.channel.send("Good bye!")
+
+        elif message.content.startswith('$emooji'):
+            emojilist = ["\U0001f600","\U0001f642","\U0001F606", "\U0001F923","\U0001F913"]
+            await message.channel.send(emojilist)
+        
+        elif message.content.startswith('$coin'):
+            flip = random.randint(1,2)
+            
+            if flip == 1 :
+                await message.channel.send("Heads!")
+            else :
+                await message.channel.send("Tails!")
 
 intents = discord.Intents.default()
 intents.message_content = True
