@@ -52,4 +52,4 @@ async def hewan(ctx):
 
 
 
-bot.run ("MTExNzc1ODg0NzE4NTA1OTkxMA.GUuS2M.7DbgbVbfF3NnqNdWtA5qlsltVD71My9xtA17zY")
+bot.run ("Token")
